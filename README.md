@@ -30,4 +30,4 @@ parameters = {
 
 ## Example
 
-Usage: see a working example at [codepen] (https://codepen.io/ajoposor/pen/EbOMM)
+Usage: see a working example at [codepen] (https://codepen.io/ajoposor/pen/EbOMMJ)
