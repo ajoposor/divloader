@@ -1,0 +1,52 @@
+// SET divInfo
+		
+	var wholeDivInitialStyling = {
+		visibility:"hidden",
+		opacity: 1
+	};
+	
+	var loaderInitialStylingUrl = 
+	    "url('https://raw.githubusercontent.com/ajoposor/Images/master/files/loader_big_blue.gif')"+
+	    "50% 50% no-repeat #FFFFFF";
+	
+	var loaderInitialStyling = {
+		visibility: "visible",
+		position: "fixed",
+		left: "0px",
+		top: "0px",
+		width: "100%",
+		height: "100%",
+		background: loaderInitialStylingUrl,
+		opacity: 1	
+	};
+	
+	loaderInitialStyling["z-index"] = "9999";
+		
+			
+	//give a name to the loader
+		
+	divInfo.loaderID = "loader_"+divInfo.wholeDivID;
+	
+	divInfo.wholeDivElement = document.getElementById(divInfo.wholeDivID);	
+	divInfo.loaderElement = document.createElement('div');
+	divInfo.loaderElement.id = divInfo.loaderID;
+	
+	divInfo.wholeDivElement.insertBefore(
+				divInfo.loaderElement, 
+				divInfo.wholeDivElement.firstChild);
+	
+	if(typeof divInfo.noLoadedDataMessage === "undefined") {
+		
+		// this will vertical align the div in the middle of the parent div, and center the text horizontally
+		divInfo.noLoadedDataMessage = '<div style="position:relative; top:50%; transform:translateY(-50%);'+
+						'text-align:center;"><h3><font color="#1A5488"  >'+
+						'<b>Datos no recibidos</b></font></div>';
+	}
+	
+	if(typeof divInfo.onErrorHideWholeDiv === "undefined") {
+		divInfo.onErrorHideWholeDiv = false;
+	}	
+		
+	setElementStyle(divInfo.loaderElement, loaderInitialStyling);
+	
+		
