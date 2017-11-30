@@ -1,12 +1,22 @@
 # divloader
 create generic function to display loader
 
-Insert library to use aoLoader.setLoader
+## Install
+Insert library in dist folder
+```
+<head>
+	
+<!-- aoLoader.js -->   
+<script src="https://raw.githubusercontent.com/ajoposor/divloader/master/dist/aoLoader.js"></script>
 
+</head>
+```
+## Description
 This function will add a loader over your divition while your content you specify is loaded.
 
 Function: aoLoader.setLoader(parameters) 
 
+## Parameters
 Parameters, a json with the following keys:
 
 parameters = {
@@ -18,5 +28,6 @@ parameters = {
 					"50% 50% no-repeat #e1e9f0")
  };
 
+## Example
 
 Usage: see a working example at [codepen] (https://codepen.io/ajoposor/pen/EbOMM)
