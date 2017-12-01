@@ -1,8 +1,7 @@
 # divloader
-create generic function to display loader
-
+This js library provides a function to display a loader over your object (div, etc) while a content is loaded.
 ## Install
-Insert library in dist folder
+Inlcude the library provided in the dist folder
 ```
 <head>
 	
@@ -12,12 +11,12 @@ Insert library in dist folder
 </head>
 ```
 ## Description
-This function will add a loader over your divition while your content you specify is loaded.
+This function will add a loader over your a specified object while a content you specify is loaded.
 
 Function: aoLoader.setLoader(parameters) 
 
 ## Parameters
-Parameters, a json with the following keys:
+Parameters, is a json with the following keys:
 
 parameters = {
 * wholeDivId: The id name of the division you want to hide,
