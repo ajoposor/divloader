@@ -41,10 +41,22 @@
 		* it is loaded after the element is get
 		*/
 
-		aoLoader.setLoader = function (
-			wholeDivId,
-			objectToBeLoadedId,
-			objectSrcData) {
+		aoLoader.setLoader = function (param) {
+			
+			console.log("param:",param);
+
+			var wholeDivId = param.wholeDivId;
+			var objectToBeLoadedId = param.objectToBeLoadedId;
+			var objectSrcData = "undefined";
+			
+			
+			
+			if ( param.hasOwnProperty('objectSrcData') ) {
+				if(param.objectSrcData !== "undefined") {
+						objectSrcData = param.objectSrcData;
+				} 
+			}
+			
 
 
 			// SET divInfo
@@ -57,7 +69,7 @@
 
 			var loaderInitialStylingUrl = 
 					"url('https://raw.githubusercontent.com/ajoposor/Images/master/files/loader_big_blue.gif')"+
-					"50% 50% no-repeat #e1e9f0";
+					"50% 50% no-repeat #ffffff";
 
 			var loaderInitialStyling = {
 				visibility: "visible",
@@ -67,24 +79,33 @@
 				bottom: "-1px",
 				left: "-1px",
 				background: loaderInitialStylingUrl,
-				opacity: 1	
+				opacity: 1,
 			};
 
 			loaderInitialStyling["z-index"] = "9999";
-
+			
+			if ( param.hasOwnProperty('loaderBackGround') ) {
+				if(param.loaderBackGround !== "undefined") {
+						loaderInitialStyling.background = param.loaderBackGround;
+				}
+			}
 
 			//give a name to the loader
 
-			var loaderID = "loader_"+wholeDivId;
+			var loaderId = "loader_"+wholeDivId;
 
 			var wholeDivElement = document.getElementById(wholeDivId);
 
 			var loaderElement = document.createElement('div');
-			loaderElement.id = loaderID;
+			loaderElement.id = loaderId;
 
 			/*wholeDivElement.insertBefore(
 						loaderElement, 
 						wholeDivElement.firstChild);*/
+			
+			console.log("loaderId:",loaderId);
+			console.log("wholeDivElement:",wholeDivElement);
+			console.log("loaderElement:",loaderElement);
 			
 			wholeDivElement.appendChild(loaderElement);
 
@@ -107,10 +128,10 @@
 				 console.log(objectToBeLoaded.tagName);
 				 if(objectToBeLoaded.tagName === 'OBJECT') {
 						objectToBeLoaded.data = objectSrcData;
-				 } else if  (objectToBeLoaded.tagName === 'IFRAME') {
+				 } else if  (objectToBeLoaded.tagName === 'IFRAME' ||
+										objectToBeLoaded.tagName === 'IMG') {
 						objectToBeLoaded.src = objectSrcData;
 				 }
-
 			}
 
 
@@ -136,3 +157,4 @@
     }  
   
 })(window);
+
