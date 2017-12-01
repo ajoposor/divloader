@@ -6,7 +6,7 @@ Inlcude the library provided in the dist folder
 <head>
 	
 <!-- aoLoader.js -->   
-<script src="https://raw.githubusercontent.com/ajoposor/divloader/master/dist/aoLoader.js"></script>
+<script src="https://rawgit.com/ajoposor/divloader/master/dist/aoLoader.js"></script>
 
 </head>
 ```
