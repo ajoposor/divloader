@@ -1,5 +1,5 @@
-# divloader
-This js library provides a function to display a loader over your object (div, etc) while a content is loaded.
+# aoLoader.setLoader(parameters) 
+The aoLoader.js library provides a function to display a loader over your object (div, etc) while a content is loaded.
 ## Install
 Inlcude the library provided in the dist folder
 ```
@@ -32,10 +32,6 @@ parameters = {
   <img src="https://raw.githubusercontent.com/ajoposor/Images/master/files/loader_big_blue.gif">
   </kbd>
 
-
-* loaderInitialStyledUrl: (optional) set your own loader gif (for example: 					"url('https://raw.githubusercontent.com/ajoposor/Images/master/files/loader_big_blue.gif')"+
-					"50% 50% no-repeat #FFFFFF")
- };
 
 ## Example
 
