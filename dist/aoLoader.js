@@ -5,6 +5,7 @@
 	function defineLibrary() {
 
 		var aoLoader = {};
+		var DEBUG = false;
 
 		/**
 		*
@@ -43,7 +44,7 @@
 
 		aoLoader.setLoader = function (param) {
 			
-			console.log("param:",param);
+			DEBUG && console.log("param:",param);
 
 			var wholeDivId = param.wholeDivId;
 			var objectToBeLoadedId = param.objectToBeLoadedId;
@@ -103,9 +104,9 @@
 						loaderElement, 
 						wholeDivElement.firstChild);*/
 			
-			console.log("loaderId:",loaderId);
-			console.log("wholeDivElement:",wholeDivElement);
-			console.log("loaderElement:",loaderElement);
+			DEBUG && console.log("loaderId:",loaderId);
+			DEBUG && console.log("wholeDivElement:",wholeDivElement);
+			DEBUG && console.log("loaderElement:",loaderElement);
 			
 			wholeDivElement.appendChild(loaderElement);
 
@@ -125,7 +126,7 @@
 
 			if(objectSrcData !== 'undefined') {
 
-				 console.log(objectToBeLoaded.tagName);
+				 DEBUG && console.log(objectToBeLoaded.tagName);
 				 if(objectToBeLoaded.tagName === 'OBJECT') {
 						objectToBeLoaded.data = objectSrcData;
 				 } else if  (objectToBeLoaded.tagName === 'IFRAME' ||
@@ -157,4 +158,3 @@
     }  
   
 })(window);
-
