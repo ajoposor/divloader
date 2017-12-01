@@ -35,7 +35,7 @@ parameters = {
 
 
 * loaderInitialStyledUrl: (optional) set your own loader gif (for example: 					"url('https://raw.githubusercontent.com/ajoposor/Images/master/files/loader_big_blue.gif')"+
-					"50% 50% no-repeat #e1e9f0")
+					"50% 50% no-repeat #FFFFFF")
  };
 
 ## Example
